@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    ROOT: DEBUG
+    org.spring.framework.cloud.config: DEBUG
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sachinkapalidigi/config-server-repository.git
+          default-label: main
+          ignore-local-ssh-settings: true
+          username: sachinkapalidigi
+          password: '{cipher}fd1354839540f88fc1bad7de9788a85505e31b4894b74007d6ff48d5dd0122ced1e4ee025cdaa8ecc677aa9543fbf4d602b11c1794a8e9c7f9f6415652932fcb'
+          clone-on-start: true
+    fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: '{cipher}9417b3fb7f87403a37b1bc274d2dc8fb6dbf28e0d7d864f95b6e5cf0c4497d10c31c464b6d20f114067e264debc0d118'

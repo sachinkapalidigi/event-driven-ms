@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty name="log.app-name" source="log.app-name" />
+    <property name="DEV_HOME" value="./twitter-to-kafka-service/logs"/>
+    <property name="APP_NAME" value="twitter-to-kafka-service"/>
+
+    <!-- Since app-config-data package is a dependency the logback-common file which is present in it will be included in the classpath    -->
+    <include resource="logback-common.xml" />
+
+</configuration>
